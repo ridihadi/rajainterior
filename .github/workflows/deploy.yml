@@ -20,4 +20,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         delete-removed: false
-        security: ftps # 👈 TAMBAHKAN BARIS INI UNTUK MENGAKTIFKAN SSL KONEKSI AMAN
+        security: strict # 👈 UBAH MENJADI strict
