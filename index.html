@@ -25,7 +25,7 @@
             --font-spacing: 1.6em;       
             --radius-card: 16px;         
             --radius-btn: 100px;        
-            --section-padding: 60px;     /* COMPACT DESKTOP SECTION PADDING */
+            --section-padding: 40px;     /* ULTRA COMPACT DESKTOP SECTION PADDING */
             --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -69,8 +69,8 @@
             letter-spacing: -0.02em;
             text-align: center;
             position: relative;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
         }
 
         h2::after {
@@ -177,6 +177,21 @@
             background-color: var(--primary);
             color: var(--white);
             transform: translateY(-3px);
+        }
+
+        /* WHATSAPP SPECIFIC BUTTON */
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: var(--white);
+            border-color: #25D366;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.15);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+            border-color: #20ba5a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
         }
 
         /* FLOATING WHATSAPP BUTTON */
@@ -372,7 +387,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 16px 0; /* COMPACT HEADER PADDING */
+            padding: 12px 0; /* COMPACTED HEADER PADDING */
             transition: var(--transition);
         }
 
@@ -457,7 +472,7 @@
         /* HERO SECTION */
         .hero-section {
             background-color: var(--bg-card);
-            padding: 80px 0 60px; /* Symmetrical spacing */
+            padding: 40px 0; /* Symmetrical ultra-compact spacing */
             overflow: hidden;
         }
 
@@ -472,14 +487,14 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 0.85rem;
             font-weight: 700;
-            margin-bottom: 28px;
+            margin-bottom: 20px;
             border: 1px solid rgba(1, 58, 32, 0.1);
         }
 
         .hero-title {
             font-size: 3.8rem;
             line-height: 1.15;
-            margin-bottom: 28px;
+            margin-bottom: 20px;
             color: var(--primary);
         }
 
@@ -489,14 +504,14 @@
 
         .hero-desc {
             font-size: 1.15rem;
-            margin-bottom: 36px;
+            margin-bottom: 24px;
             max-width: 560px;
             color: var(--text-muted);
         }
 
         .hero-actions {
             display: flex;
-            gap: 20px;
+            gap: 16px;
         }
 
         .hero-visual {
@@ -508,10 +523,10 @@
 
         .hero-visual img {
             width: 100%;
-            height: 480px;
+            height: 420px;
             border-radius: var(--radius-card);
             object-fit: cover;
-            box-shadow: 0 20px 45px rgba(110, 47, 21, 0.15);
+            box-shadow: 0 15px 35px rgba(110, 47, 21, 0.12);
             border: 1px solid var(--secondary-light);
             transition: var(--transition);
         }
@@ -528,11 +543,11 @@
         .problem-intro {
             text-align: center;
             max-width: 800px;
-            margin: 0 auto 60px;
+            margin: 0 auto 30px; /* Reduced bottom margin */
         }
 
         .problem-grid {
-            margin-top: 50px;
+            margin-top: 30px; /* Reduced top margin */
         }
 
         .problem-card {
@@ -555,10 +570,10 @@
         }
 
         .problem-footer {
-            margin-top: 50px;
+            margin-top: 30px; /* Reduced top margin */
             text-align: center;
             background-color: rgba(110, 47, 21, 0.04);
-            padding: 36px;
+            padding: 28px;
             border-radius: var(--radius-card);
             border: 1px dashed var(--secondary-light);
         }
@@ -578,14 +593,14 @@
         }
 
         .stat-grid {
-            margin-top: 60px;
+            margin-top: 30px; /* Reduced top margin */
         }
 
         .stat-card {
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(236, 213, 187, 0.1);
             text-align: center;
-            padding: 48px 24px;
+            padding: 36px 24px;
         }
 
         .stat-card:hover {
@@ -622,7 +637,7 @@
         }
 
         .fitur-grid {
-            margin-top: 60px;
+            margin-top: 30px; /* Reduced top margin */
         }
 
         .fitur-card {
@@ -647,7 +662,7 @@
         }
 
         .benefit-grid {
-            margin-top: 60px;
+            margin-top: 30px; /* Reduced top margin */
         }
 
         .benefit-card {
@@ -667,43 +682,37 @@
             line-height: 1;
         }
 
-        /* CTA / PRICING SECTION & CALCULATOR */
-        .cta-section {
+        /* YOUTUBE VIDEO SECTION STYLES */
+        .video-section {
             background-color: var(--white);
         }
 
-        .pricing-wrapper {
-            background-color: var(--bg-card);
+        .video-wrapper {
+            max-width: 850px;
+            margin: 24px auto 0; /* Reduced top margin */
+            background: var(--white);
             border-radius: var(--radius-card);
+            padding: 16px;
+            box-shadow: 0 10px 30px rgba(110, 47, 21, 0.03);
             border: 1px solid rgba(236, 213, 187, 0.4);
-            padding: 48px;
         }
 
-        /* CALCULATOR COMPONENT ("Gak AI Banget" Custom UI) */
-        .planner-card {
-            background-color: var(--white);
-            border-radius: 12px;
-            padding: 32px;
-            border: 1px solid rgba(110, 47, 21, 0.12);
-            box-shadow: 0 10px 30px rgba(110, 47, 21, 0.04);
-            text-align: left;
-        }
-
-        .pricing-output {
-            background-color: rgba(110, 47, 21, 0.04);
-            border: 1px solid rgba(110, 47, 21, 0.12);
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
             border-radius: 8px;
-            padding: 20px;
-            margin-top: 24px;
-            text-align: center;
+            overflow: hidden;
         }
 
-        .pricing-output-val {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin: 8px 0;
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
         /* ABOUT / INTRODUCING PRODUCT */
@@ -715,7 +724,7 @@
             background-color: var(--bg-card);
             border: 1px solid rgba(236, 213, 187, 0.4);
             border-radius: var(--radius-card);
-            padding: 48px;
+            padding: 36px; /* Compact padding */
         }
 
         /* FAQ SECTION */
@@ -728,8 +737,8 @@
             background-color: var(--white);
             border: 1px solid rgba(236, 213, 187, 0.4);
             border-radius: var(--radius-card);
-            padding: 32px;
-            margin-top: 35px;
+            padding: 24px; /* Reduced padding */
+            margin-top: 24px; /* Reduced top margin */
             box-shadow: 0 8px 25px rgba(110, 47, 21, 0.02);
         }
 
@@ -738,8 +747,8 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid rgba(236, 213, 187, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
             flex-wrap: wrap;
             gap: 15px;
         }
@@ -772,8 +781,8 @@
 
         .review-item {
             border-bottom: 1px dashed rgba(236, 213, 187, 0.3);
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
         }
 
         .review-item:last-child {
@@ -792,30 +801,30 @@
         .closing-section h2 {
             color: var(--secondary-light);
             font-size: 2.8rem;
-            margin-bottom: 28px;
+            margin-bottom: 20px;
         }
 
         .closing-section p {
             color: rgba(255, 255, 255, 0.85);
             font-size: 1.2rem;
             max-width: 800px;
-            margin: 0 auto 48px;
+            margin: 0 auto 36px;
         }
 
         /* FOOTER (COMPACT & RAMPING) */
         footer {
             background-color: var(--primary);
             color: var(--white);
-            padding-top: 50px;    /* COMPACTED */
-            padding-bottom: 30px; /* COMPACTED */
+            padding-top: 40px;    /* ULTRA COMPACTED */
+            padding-bottom: 24px; /* ULTRA COMPACTED */
             border-top: 5px solid var(--secondary-light);
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1.2fr 1.2fr;
-            gap: 40px;            /* COMPACTED */
-            margin-bottom: 40px;  /* COMPACTED */
+            gap: 32px;            /* COMPACTED */
+            margin-bottom: 32px;  /* COMPACTED */
         }
 
         .footer-logo {
@@ -824,7 +833,7 @@
             font-weight: 900;
             color: var(--secondary-light);
             text-decoration: none;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             display: inline-block;
             letter-spacing: 0.05em;
         }
@@ -832,7 +841,7 @@
         .footer-col h4 {
             color: var(--secondary-light);
             font-size: 1.2rem;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             font-weight: 700;
             position: relative;
             display: inline-block;
@@ -851,7 +860,7 @@
         .footer-col p {
             color: rgba(255, 255, 255, 0.8);
             font-size: 0.95rem;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         .footer-links {
@@ -859,7 +868,7 @@
         }
 
         .footer-links li {
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         .footer-links a {
@@ -876,7 +885,7 @@
 
         .footer-bottom {
             border-top: 1px solid rgba(236, 213, 187, 0.15);
-            padding-top: 30px;
+            padding-top: 24px;
             text-align: center;
         }
 
@@ -889,13 +898,13 @@
         /* FAQ CONTAINER styles */
         .faq-container {
             max-width: 850px;
-            margin: 50px auto 0;
+            margin: 30px auto 0; /* Reduced top margin */
         }
 
         .faq-item {
             background-color: var(--white);
             border-radius: var(--radius-card);
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             border: 1px solid rgba(236, 213, 187, 0.3);
             overflow: hidden;
             transition: var(--transition);
@@ -906,7 +915,7 @@
             text-align: left;
             background: none;
             border: none;
-            padding: 24px 28px;
+            padding: 20px 24px;
             font-family: 'Montserrat', sans-serif;
             font-size: 1.1rem;
             font-weight: 700;
@@ -944,7 +953,7 @@
         }
 
         .faq-content p {
-            padding: 0 28px 24px;
+            padding: 0 24px 20px;
             margin-bottom: 0;
             font-size: 0.95rem;
             color: var(--text-muted);
@@ -1201,26 +1210,26 @@
             }
             .grid-2 {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 32px; /* Compact gap */
             }
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 32px;
             }
         }
 
         @media (max-width: 768px) {
             :root {
-                --section-padding: 40px; /* STRICT 40PX MOBILE SECTION PADDING */
+                --section-padding: 24px; /* STRICT 24PX MOBILE SECTION PADDING FOR DEEPER COMPACTNESS */
             }
 
             header {
-                padding: 12px 0 !important; /* COMPACT HEADER FOR MOBILE */
+                padding: 8px 0 !important; /* COMPACT HEADER FOR MOBILE */
             }
 
             footer {
-                padding-top: 40px !important;    /* COMPACTED FOR MOBILE */
-                padding-bottom: 24px !important; /* COMPACTED FOR MOBILE */
+                padding-top: 32px !important;    /* COMPACTED FOR MOBILE */
+                padding-bottom: 20px !important; /* COMPACTED FOR MOBILE */
             }
 
             /* --- MANDATORY FONT SIZE RULES --- */
@@ -1255,13 +1264,13 @@
             .problem-intro p,
             .stat-desc,
             .closing-section p,
-            .pricing-wrapper p {
+            .video-section p {
                 text-align: center !important;
             }
 
             .hero-badge {
                 align-self: center;
-                margin: 0 auto 28px;
+                margin: 0 auto 20px;
             }
 
             /* Keep clean left alignment inside lists/cards with icons */
@@ -1335,7 +1344,7 @@
             }
 
             .hero-visual img {
-                height: 320px !important; /* constrained for neat mobile views */
+                height: 300px !important; /* constrained for neat mobile views */
             }
 
             .portfolio-main-img-wrapper {
@@ -1363,14 +1372,11 @@
                 width: 100%;
             }
 
-            .pricing-wrapper {
-                padding: 40px 24px;
-            }
             .intro-container {
-                padding: 40px 24px;
+                padding: 32px 20px;
             }
             .modal-content {
-                padding: 32px 24px;
+                padding: 32px 20px;
             }
         }
 
@@ -1404,12 +1410,11 @@
             </button>
 
             <ul class="nav-links" id="nav-links">
-                <li><a href="#problem">Masalah</a></li>
                 <li><a href="#about">Tentang Kami</a></li>
                 <li><a href="#benefit">Keunggulan</a></li>
                 <li><a href="#portfolio">Portofolio</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#pricing" class="btn btn-outline" style="padding: 12px 24px;">Konsultasi Gratis</a></li>
+                <li><a href="#" onclick="openConsultationModal(); return false;" class="btn btn-outline" style="padding: 10px 20px;">Konsultasi Gratis</a></li>
             </ul>
         </div>
     </header>
@@ -1433,7 +1438,7 @@
                 <h1 class="hero-title">Wujudkan Hunian Impian Tanpa <span>Cemas & Overbudget</span></h1>
                 <p class="hero-desc">Studio desain interior, workshop custom furniture, dan renovasi rumah di Bandung. Menghadirkan keseimbangan sempurna antara estetika premium, kenyamanan, dan transparansi anggaran sejak 2015.</p>
                 <div class="hero-actions">
-                    <a href="#pricing" class="btn btn-primary">Dapatkan Estimasi Biaya</a>
+                    <button onclick="openConsultationModal()" class="btn btn-primary">Konsultasi Gratis Sekarang</button>
                     <a href="#about" class="btn btn-outline">Pelajari Alur Kerja</a>
                 </div>
             </div>
@@ -1509,7 +1514,7 @@
         <div class="container">
             <h2 style="color: var(--secondary-light);">Bukti Riil Transparansi & Kepercayaan</h2>
             <p style="text-align: center; max-width: 650px; margin: 0 auto 30px;">Setiap langkah pengerjaan di Raja Interior didukung oleh data akurat, perencanaan presisi, serta optimasi efisiensi bahan guna menekan pengeluaran yang tidak perlu.</p>
-            <div class="grid-4 stat-grid">
+            <div class="grid-3 stat-grid">
                 <div class="card stat-card">
                     <div class="stat-number">500+</div>
                     <div class="stat-label">Proyek Selesai</div>
@@ -1524,11 +1529,6 @@
                     <div class="stat-number">100%</div>
                     <div class="stat-label">RAB Transparan</div>
                     <p class="stat-desc">Nihil biaya siluman. Anggaran disepakati tertulis jelas sebelum paku dipasang.</p>
-                </div>
-                <div class="card stat-card">
-                    <div class="stat-number">0</div>
-                    <div class="stat-label">Kasus Terbengkalai</div>
-                    <p class="stat-desc">Kami selalu merampungkan pekerjaan tepat waktu sesuai jadwal timeline.</p>
                 </div>
             </div>
         </div>
@@ -1584,7 +1584,7 @@
                 <div class="card benefit-card">
                     <div class="benefit-num">03</div>
                     <h3>Progress Terupdate Berkala</h3>
-                    <p>Anda tidak perlu repot menanyakan update. Laporan foto dan video perkembangan lapangan akan dikirim aktif ke grup WhatsApp Anda.</p>
+                    <p>Anda tidak perlu repot menanyakan update. Laporan foto and video perkembangan lapangan akan dikirim aktif ke grup WhatsApp Anda.</p>
                 </div>
                 <div class="card benefit-card">
                     <div class="benefit-num">04</div>
@@ -1683,7 +1683,7 @@
                     </div>
                     <div class="portfolio-project-info">
                         <h4>Master Bedroom Cozy Earth</h4>
-                        <p>Kamar tidur utama dengan panel dinding terakota hangat, ranjang kustom terintegrasi dengan laci penyimpanan, dan pencahayaan hangat untuk kenyamanan istirahat maksimal.</p>
+                        <p>Kamar tidur utama dengan panel dinding terakota hangat, ranjang kustom terintegrasi dengan laci penyimpanan, and pencahayaan hangat untuk kenyamanan istirahat maksimal.</p>
                     </div>
                     <div class="portfolio-thumbnails-grid">
                         <div class="portfolio-thumb active" onclick="changeProjectCardImage(this, 2, 0)">
@@ -1712,7 +1712,7 @@
                     </div>
                     <div class="portfolio-project-info">
                         <h4>Minimalist Creative Studio</h4>
-                        <p>Studio ruang kerja kreatif dengan meja gantung terintegrasi, rak buku minimalis, dan tata cahaya fungsional penunjang fokus kerja harian.</p>
+                        <p>Studio ruang kerja kreatif dengan meja gantung terintegrasi, rak buku minimalis, and tata cahaya fungsional penunjang fokus kerja harian.</p>
                     </div>
                     <div class="portfolio-thumbnails-grid">
                         <div class="portfolio-thumb active" onclick="changeProjectCardImage(this, 3, 0)">
@@ -1733,104 +1733,27 @@
         </div>
     </section>
 
-    <!-- 8. CTA SECTION (WITH INTEGRATED ESTIMATOR) -->
-    <section id="pricing" class="section cta-section">
+    <!-- 8. YOUTUBE VIDEO SECTION -->
+    <section class="section video-section">
         <div class="container">
-            <div class="pricing-wrapper">
-                <div class="grid-2">
-                    <!-- Left: Conversion Text -->
-                    <div style="text-align: left;">
-                        <h2 style="text-align: left; margin-bottom: 24px; color: var(--primary);">Berapa Estimasi Anggaran Proyek Rumah Anda?</h2>
-                        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 28px;">
-                            Gunakan simulator transparan kami di sebelah kanan untuk memperkirakan biaya konstruksi interior Anda. Rancangan estimasi ini disesuaikan langsung dengan spesifikasi material nyata di workshop kami.
-                        </p>
-                        
-                        <div style="background: rgba(255, 255, 255, 0.4); border-radius: 8px; padding: 24px; border: 1px solid rgba(236, 213, 187, 0.6); margin-bottom: 28px;">
-                            <h4 style="color: var(--secondary-dark); margin-bottom: 12px; font-size: 1.1rem;">🛡️ Mengapa Simulasi Kami Akurat?</h4>
-                            <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 0; color: var(--text-muted);">
-                                Kami menghitung berdasarkan luas m² bersih dan spesifikasi HPL/Multipleks asli berstandar tinggi, bukan perkiraan asal yang berujung pada biaya siluman.
-                            </p>
-                        </div>
-
-                        <div style="display: flex; align-items: center; gap: 12px;">
-                            <div style="background-color: var(--primary); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white);">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            </div>
-                            <div>
-                                <p style="font-size: 0.8rem; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; color: var(--text-muted);">Atau Hubungi Langsung</p>
-                                <p style="font-weight: 800; font-size: 1.1rem; color: var(--primary); margin-bottom: 0;">+62 821-2145-6700</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right: Dynamic Calculator -->
-                    <div class="planner-card">
-                        <h3 style="color: var(--primary); font-size: 1.4rem; margin-bottom: 20px; border-bottom: 1px dashed rgba(236, 213, 187, 0.6); padding-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="9" y1="22" x2="15" y2="22"></line><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
-                            Kalkulator Anggaran Interior
-                        </h3>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="calc-room">Pilih Tipe Ruangan</label>
-                            <select id="calc-room" class="form-control" onchange="calculateInteriorCost()">
-                                <option value="living">Ruang Keluarga / Living Room</option>
-                                <option value="kitchen">Dapur Minimalis / Kitchen Set</option>
-                                <option value="bedroom">Kamar Tidur / Bed Room</option>
-                                <option value="office">Ruang Kerja / Home Office</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                                <label class="form-label" style="margin-bottom: 0;">Estimasi Luas Ruangan (m²)</label>
-                                <span id="calc-area-val" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary);">20 m²</span>
-                            </div>
-                            <input type="range" id="calc-area" class="form-control" min="5" max="100" value="20" style="padding: 0; cursor: pointer;" oninput="updateAreaSlider(this.value)">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Tingkat Spesifikasi Material</label>
-                            <select id="calc-material" class="form-control" onchange="calculateInteriorCost()">
-                                <option value="std">Standard (Multipleks 15mm + HPL Motif Dasar)</option>
-                                <option value="prem" selected>Premium (Multipleks 18mm + Blockboard + HPL Tekstur Kayu)</option>
-                                <option value="lux">Luxury (Multipleks 18mm + Anti-Rayap PVC + Top Marmer + Aksesoris Slow-motion)</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group" style="margin-bottom: 28px;">
-                            <label class="form-label">Fitur Tambahan (Opsional)</label>
-                            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 8px;">
-                                <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--text-muted); cursor: pointer;">
-                                    <input type="checkbox" id="add-lighting" value="250000" onchange="calculateInteriorCost()" style="accent-color: var(--primary); width: 16px; height: 16px;">
-                                    Instalasi LED Strip Warm White (Ambalan)
-                                </label>
-                                <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--text-muted); cursor: pointer;">
-                                    <input type="checkbox" id="add-plumbing" value="450000" onchange="calculateInteriorCost()" style="accent-color: var(--primary); width: 16px; height: 16px;">
-                                    Pekerjaan Jalur Air & Sink (Dapur)
-                                </label>
-                                <label style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--text-muted); cursor: pointer;">
-                                    <input type="checkbox" id="add-wall" value="300000" onchange="calculateInteriorCost()" style="accent-color: var(--primary); width: 16px; height: 16px;">
-                                    Backdrop TV / Kisi Kayu Tambahan
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="pricing-output">
-                            <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">Perkiraan Rentang Anggaran:</p>
-                            <div class="pricing-output-val" id="calc-result">Rp 38.000.000 - Rp 44.000.000</div>
-                            <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0;" id="calc-material-note">Menggunakan spesifikasi Multipleks Premium HPL Tekstur.</p>
-                        </div>
-
-                        <button onclick="openConsultationWithCalculation()" class="btn btn-primary" style="width: 100%; margin-top: 20px; font-size: 0.95rem;">
-                            Klaim Hasil & Konsultasi Gratis
-                        </button>
-                    </div>
+            <h2 style="text-align: center;">Lihat Proses Kerja & Kualitas Kami</h2>
+            <p style="text-align: center; max-width: 650px; margin: 0 auto 30px;">Saksikan bagaimana tim desainer dan pengrajin ahli kami mewujudkan kustom mebel presisi tinggi langsung dari workshop Raja Interior.</p>
+            
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <!-- TIPS: Untuk mengganti video ini, ganti kode "y9S7Z2gK_F4" setelah "embed/" di bawah dengan Kode ID Video YouTube Anda -->
+                    <iframe 
+                        src="https://www.youtube.com/embed/y9S7Z2gK_F4" 
+                        title="Raja Interior Workshop Tour & Project Walkthrough" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 9. INTRODUCING PRODUCT / ABOUT -->
+    <!-- 9. ABOUT / INTRODUCING PRODUCT -->
     <section id="about" class="section introducing-section">
         <div class="container">
             <div class="intro-container">
@@ -1863,7 +1786,7 @@
                         </div>
                         <div>
                             <h4 style="color: var(--secondary-dark); margin-bottom: 8px;">🛡️ Komitmen Utama</h4>
-                            <p style="font-size: 0.95rem; margin-bottom: 0;">Garansi kepuasan, pengawasan aktif harian, dan pembayaran bertahap berbasis progres.</p>
+                            <p style="font-size: 0.95rem; margin-bottom: 0;">Garansi kepuasan, pengawasan aktif harian, and pembayaran bertahap berbasis progres.</p>
                         </div>
                     </div>
                 </div>
@@ -1912,7 +1835,7 @@
                             </div>
                             <span style="font-size: 0.75rem; color: var(--text-muted);">1 bulan lalu</span>
                         </div>
-                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.6;">"Sangat rekomendasi untuk jasa renovasi dan interior di daerah Bandung. Komunikasi lancar dan tidak pelit informasi, arsiteknya dengerin kemauan kami, pengerjaan struktur sipil rapi dan yang terpenting pembayaran bertahap."</p>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0; line-height: 1.6;">"Sangat rekomendasi untuk jasa renovasi and interior di daerah Bandung. Komunikasi lancar dan tidak pelit informasi, arsiteknya dengerin kemauan kami, pengerjaan struktur sipil rapi dan yang terpenting pembayaran bertahap."</p>
                     </div>
                     
                     <div style="text-align: center; margin-top: 24px;">
@@ -1988,14 +1911,15 @@
             <div>
                 <a href="#" class="footer-logo">RAJA INTERIOR</a>
                 <p>Studio Desain Interior, Workshop Mebel & Jasa Renovasi Rumah Terpercaya sejak 2015 di Jawa Barat.</p>
-                <p style="margin-top: 24px; font-size: 0.95rem;">📍 Jl. Parakan Saat No. 2, Arcamanik, Bandung, Jawa Barat.</p>
+                <p style="margin-top: 24px; font-size: 0.95rem; color: #ffffff;">📍 Jl. Parakan Saat No. 2, Arcamanik, Bandung, Jawa Barat.</p>
             </div>
             <div class="footer-col">
                 <h4>Navigasi</h4>
                 <ul class="footer-links">
-                    <li><a href="#problem">Masalah</a></li>
                     <li><a href="#about">Tentang Kami</a></li>
                     <li><a href="#benefit">Keunggulan</a></li>
+                    <li><a href="#portfolio">Portofolio</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -2031,7 +1955,10 @@
                     <textarea id="lead-desc" class="form-control" rows="3" placeholder="Ceritakan singkat kebutuhan ruangan Anda (misal: buat kitchen set minimalis)" required></textarea>
                 </div>
                 
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Kirim Data Konsultasi</button>
+                <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 10px; gap: 8px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.455h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Chat Kami Sekarang
+                </button>
             </form>
         </div>
     </div>
@@ -2083,7 +2010,7 @@
             {
                 title: "Japandi Living Room",
                 location: "Arcamanik, Bandung",
-                desc: "Desain ruang keluarga minimalis Japandi dengan sentuhan kayu jati alami, backdrop TV bermotif linier kayu, tata pencahayaan hangat, dan sirkulasi udara optimal.",
+                desc: "Desain ruang keluarga minimalis Japandi dengan sentuhan kayu jati alami, backdrop TV bermotif linier kayu, tata pencahayaan hangat, and sirkulasi udara optimal.",
                 images: [
                     "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=80",
                     "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80",
@@ -2094,7 +2021,7 @@
             {
                 title: "Modern Elegant Kitchen",
                 location: "Dago, Bandung",
-                desc: "Kitchen set premium menggunakan kabinet anti-lembap berfinishing HPL motif marmer putih dikombinasikan dengan pencahayaan LED profil tersembunyi, mini bar ergonomis, dan laci fungsional.",
+                desc: "Kitchen set premium menggunakan kabinet anti-lembap berfinishing HPL motif marmer putih dikombinasikan dengan pencahayaan LED profil tersembunyi, mini bar ergonomis, and laci fungsional.",
                 images: [
                     "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80",
                     "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1000&q=80",
@@ -2105,7 +2032,7 @@
             {
                 title: "Master Bedroom Cozy Earth",
                 location: "Setiabudi, Bandung",
-                desc: "Kamar tidur utama dengan panel dinding terakota hangat, ranjang kustom multifungsi dengan laci penyimpanan, panel berlapis kain, dan pencahayaan fungsional.",
+                desc: "Kamar tidur utama dengan panel dinding terakota hangat, ranjang kustom multifungsi dengan laci penyimpanan, panel berlapis kain, and pencahayaan fungsional.",
                 images: [
                     "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1000&q=80",
                     "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80",
@@ -2116,7 +2043,7 @@
             {
                 title: "Minimalist Creative Studio",
                 location: "Ciumbuleuit, Bandung",
-                desc: "Studio ruang kerja kreatif dengan meja gantung terintegrasi, rak buku minimalis, pencahayaan fungsional penunjang fokus, dan area santai mini pemicu ide kreatif.",
+                desc: "Studio ruang kerja kreatif dengan meja gantung terintegrasi, rak buku minimalis, pencahayaan fungsional penunjang fokus, and area santai mini pemicu ide kreatif.",
                 images: [
                     "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1000&q=80",
                     "https://images.unsplash.com/photo-1501183007986-d0d080b147f9?auto=format&fit=crop&w=1000&q=80",
@@ -2204,77 +2131,6 @@
             }
         });
 
-        // DYNAMIC ESTIMATOR COST MATHEMATICS
-        function updateAreaSlider(val) {
-            document.getElementById('calc-area-val').innerText = `${val} m²`;
-            calculateInteriorCost();
-        }
-
-        function calculateInteriorCost() {
-            const roomType = document.getElementById('calc-room').value;
-            const area = parseFloat(document.getElementById('calc-area').value);
-            const material = document.getElementById('calc-material').value;
-
-            // Base price per m² according to room type
-            let basePricePerM2 = 1800000; // default bedroom
-            if (roomType === 'living') basePricePerM2 = 1900000;
-            else if (roomType === 'kitchen') basePricePerM2 = 2400000;
-            else if (roomType === 'office') basePricePerM2 = 1700000;
-
-            // Material quality multipliers
-            let multiplier = 1.0;
-            let materialNote = "Menggunakan spesifikasi Multipleks Standard HPL Motif Dasar.";
-            if (material === 'prem') {
-                multiplier = 1.25;
-                materialNote = "Menggunakan spesifikasi Multipleks Premium HPL Tekstur Kayu.";
-            } else if (material === 'lux') {
-                multiplier = 1.6;
-                materialNote = "Menggunakan multipleks tebal, PVC Anti-Rayap, Top Marmer & Slow-motion.";
-            }
-
-            // Calculation base
-            let computedBase = basePricePerM2 * area * multiplier;
-
-            // Add-on checkboxes
-            let addonsTotal = 0;
-            if (document.getElementById('add-lighting').checked) {
-                addonsTotal += parseFloat(document.getElementById('add-lighting').value) * area * 0.4;
-            }
-            if (document.getElementById('add-plumbing').checked) {
-                addonsTotal += parseFloat(document.getElementById('add-plumbing').value) * 1.5;
-            }
-            if (document.getElementById('add-wall').checked) {
-                addonsTotal += parseFloat(document.getElementById('add-wall').value) * area * 0.6;
-            }
-
-            const finalEstimateLower = Math.round((computedBase + addonsTotal) * 0.95);
-            const finalEstimateUpper = Math.round((computedBase + addonsTotal) * 1.1);
-
-            // Format Currency
-            const formattedLower = formatRupiah(finalEstimateLower);
-            const formattedUpper = formatRupiah(finalEstimateUpper);
-
-            document.getElementById('calc-result').innerText = `${formattedLower} - ${formattedUpper}`;
-            document.getElementById('calc-material-note').innerText = materialNote;
-        }
-
-        function formatRupiah(num) {
-            return "Rp " + num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-        }
-
-        // Preset form context with pre-calculated parameters for conversion modal
-        function openConsultationWithCalculation() {
-            const room = document.getElementById('calc-room').options[document.getElementById('calc-room').selectedIndex].text;
-            const area = document.getElementById('calc-area').value;
-            const mat = document.getElementById('calc-material').options[document.getElementById('calc-material').selectedIndex].text;
-            const est = document.getElementById('calc-result').innerText;
-
-            const textDesc = `Ingin konsultasi hasil estimasi kalkulator: Ruangan ${room} dengan Luas ${area}m² menggunakan spek ${mat} (Estimasi: ${est}).`;
-            document.getElementById('lead-desc').value = textDesc;
-            
-            openConsultationModal();
-        }
-
         // Custom Accordion Toggle for FAQ
         function toggleFaq(buttonElement) {
             const faqItem = buttonElement.parentElement;
@@ -2295,6 +2151,11 @@
         function openConsultationModal() {
             document.getElementById('lead-modal').classList.add('open');
         }
+
+        // Add a helper function to bind the footer link correctly as well
+        document.querySelectorAll('footer .footer-links a[href="#problem"]').forEach(link => {
+            link.parentElement.remove(); // Removes the problem navigation from footer as well
+        });
 
         function closeConsultationModal() {
             document.getElementById('lead-modal').classList.remove('open');
@@ -2333,7 +2194,7 @@
                         Terima kasih, <strong>${name}</strong>. Data Anda sudah kami terima. <br>
                         Silakan klik tombol di bawah untuk langsung terhubung dengan tim Arsitek kami di WhatsApp.
                     </p>
-                    <a href="${waUrl}" target="_blank" class="btn btn-primary" style="width: 100%; margin-bottom: 12px; background-color: #25D366; border-color: #25D366; display: inline-flex; align-items: center; gap: 8px;">
+                    <a href="${waUrl}" target="_blank" class="btn btn-whatsapp" style="width: 100%; margin-bottom: 12px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                         Hubungi via WhatsApp Chat
                     </a>
@@ -2346,11 +2207,6 @@
                 window.open(waUrl, '_blank');
             }, 1500);
         }
-
-        // Initialize defaults
-        window.onload = function() {
-            calculateInteriorCost();
-        }
     </script>
 </body>
-</html> 
+</html>
