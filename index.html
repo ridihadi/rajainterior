@@ -398,15 +398,20 @@
         }
 
         .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--primary);
-            text-decoration: none;
-            letter-spacing: 0.06em;
             display: flex;
             align-items: center;
-            gap: 10px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo img {
+            height: 40px; /* Precise height fitting the compact header */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo:hover {
+            transform: scale(1.02);
         }
 
         .logo span {
@@ -682,7 +687,7 @@
             line-height: 1;
         }
 
-        /* YOUTUBE VIDEO SECTION STYLES */
+        /* YOUTUBE VIDEO SECTION STYLES (WITH PREMIUM COVER WORKFLOW) */
         .video-section {
             background-color: var(--white);
         }
@@ -704,6 +709,63 @@
             height: 0;
             border-radius: 8px;
             overflow: hidden;
+            cursor: pointer;
+            background-color: #1a1512;
+        }
+
+        .video-cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .cover-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .play-button-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(110, 47, 21, 0.15); /* elegant warm overlay */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .play-button-circle {
+            width: 72px;
+            height: 72px;
+            background-color: var(--white);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(110, 47, 21, 0.25);
+            transition: var(--transition);
+            padding-left: 4px; /* Perfectly center the triangle play icon */
+        }
+
+        .video-container:hover .play-button-circle {
+            transform: scale(1.1);
+            background-color: var(--primary);
+            color: var(--white);
+            box-shadow: 0 12px 30px rgba(110, 47, 21, 0.4);
+        }
+
+        .video-container:hover .portfolio-main-img {
+            transform: scale(1.03);
         }
 
         .video-container iframe {
@@ -713,6 +775,7 @@
             width: 100%;
             height: 100%;
             border: 0;
+            z-index: 1;
         }
 
         /* ABOUT / INTRODUCING PRODUCT */
@@ -1399,8 +1462,7 @@
     <header>
         <div class="container nav-container">
             <a href="#" class="logo">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary);"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                RAJA<span>INTERIOR</span>
+                <img src="https://i.spread.name/7409f2ec-0ca3-4018-8c43-273d7f3d7d64_Picture1.png" alt="Raja Interior Logo">
             </a>
             
             <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
@@ -1719,7 +1781,7 @@
                             <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=150&q=80" alt="Detail 1">
                         </div>
                         <div class="portfolio-thumb" onclick="changeProjectCardImage(this, 3, 1)">
-                            <img src="https://images.unsplash.com/photo-1501183007986-d0d080b147f9?auto=format&fit=crop&w=150&q=80" alt="Detail 2">
+                            <img src="https://images.unsplash.com/photo-1501183007986-d0d080b147f9?auto=format&fit=crop&w=1000&q=80" alt="Detail 2">
                         </div>
                         <div class="portfolio-thumb" onclick="changeProjectCardImage(this, 3, 2)">
                             <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=150&q=80" alt="Detail 3">
@@ -1733,21 +1795,25 @@
         </div>
     </section>
 
-    <!-- 8. YOUTUBE VIDEO SECTION -->
+    <!-- 8. YOUTUBE VIDEO SECTION (WITH PREMIUM CUSTOM COVER) -->
     <section class="section video-section">
         <div class="container">
             <h2 style="text-align: center;">Lihat Proses Kerja & Kualitas Kami</h2>
             <p style="text-align: center; max-width: 650px; margin: 0 auto 30px;">Saksikan bagaimana tim desainer dan pengrajin ahli kami mewujudkan kustom mebel presisi tinggi langsung dari workshop Raja Interior.</p>
             
             <div class="video-wrapper">
-                <div class="video-container">
-                    <!-- TIPS: Untuk mengganti video ini, ganti kode "y9S7Z2gK_F4" setelah "embed/" di bawah dengan Kode ID Video YouTube Anda -->
-                    <iframe 
-                        src="https://www.youtube.com/embed/O5vAXN4tG9U" 
-                        title="Raja Interior Workshop Tour & Project Walkthrough" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                    </iframe>
+                <div class="video-container" id="video-container" onclick="playYoutubeVideo()">
+                    <!-- COVER IMAGE KUSTOM (Bisa diganti URL src milik sendiri di bawah) -->
+                    <div class="video-cover" id="video-cover">
+                        <img class="cover-img" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" alt="Cover Video Workshop Raja Interior">
+                        <div class="play-button-overlay">
+                            <div class="play-button-circle">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Player placeholder yang akan diganti iframe secara otomatis oleh JS -->
+                    <div id="youtube-player"></div>
                 </div>
             </div>
         </div>
@@ -2130,6 +2196,31 @@
                 closeLightbox();
             }
         });
+
+        // CUSTOM LAZY-LOAD YOUTUBE PLAYER SYSTEM
+        function playYoutubeVideo() {
+            const cover = document.getElementById('video-cover');
+            const playerDiv = document.getElementById('youtube-player');
+            
+            // TIPS: Ubah ID Video YouTube Anda di sini (contoh: y9S7Z2gK_F4)
+            const videoId = "y9S7Z2gK_F4"; 
+            
+            // Masukkan iframe dengan parameter autoplay agar video langsung menyala otomatis saat kover diklik
+            playerDiv.innerHTML = `
+                <iframe 
+                    src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0" 
+                    title="Raja Interior Workshop Tour & Project Walkthrough" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            `;
+            
+            // Samarkan kover dengan transisi CSS opasitas
+            cover.style.opacity = '0';
+            setTimeout(() => {
+                cover.style.display = 'none';
+            }, 400);
+        }
 
         // Custom Accordion Toggle for FAQ
         function toggleFaq(buttonElement) {
