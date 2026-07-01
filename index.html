@@ -4,10 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raja Interior - Jasa Desain Interior & Renovasi Rumah Bandung</title>
+    
+    <!-- 
+      =========================================
+      META PIXEL BASE CODE
+      Ganti 'ID_PIXEL_ANDA' dengan ID Meta Pixel Anda yang asli (berupa angka).
+      =========================================
+    -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        
+        // Inisialisasi Meta Pixel Anda
+        // TIPS: Ganti ID_PIXEL_ANDA dengan nomor ID Pixel ril dari Meta Events Manager Anda.
+        fbq('init', '1036587375560821'); 
+        
+        // Mengirimkan event PageView default saat halaman pertama kali dimuat
+        fbq('track', 'PageView');
+        
+        // Fungsi helper untuk logging status di console saat preview agar mudah ditest
+        console.log("Meta Pixel: PageView terkirim.");
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" 
+             src="https://www.facebook.com/tr?id=1036587375560821&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- ========================================= -->
+
     <!-- Google Fonts: Montserrat (Headings) & Inter (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
         /* CSS RESET & VARIABLES */
         :root {
@@ -379,7 +413,7 @@
             object-fit: cover;
         }
 
-        /* HEADER NAV (ALWAYS STANDARD HORIZONTAL NAV LINKS) */
+        /* HEADER NAV */
         header {
             background-color: rgba(253, 251, 248, 0.95);
             backdrop-filter: blur(12px);
@@ -387,7 +421,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 12px 0; /* COMPACTED HEADER PADDING */
+            padding: 12px 0;
             transition: var(--transition);
         }
 
@@ -405,7 +439,7 @@
         }
 
         .logo img {
-            height: 40px; /* Precise height fitting the compact header */
+            height: 40px;
             width: auto;
             object-fit: contain;
         }
@@ -414,13 +448,9 @@
             transform: scale(1.02);
         }
 
-        .logo span {
-            color: var(--secondary-dark);
-        }
-
         .nav-links {
             display: flex;
-            gap: 24px; /* Slightly tighter gap to prevent overflowing */
+            gap: 24px;
             list-style: none;
             align-items: center;
         }
@@ -457,7 +487,7 @@
         /* HERO SECTION */
         .hero-section {
             background-color: var(--bg-card);
-            padding: 40px 0; /* Symmetrical ultra-compact spacing */
+            padding: 40px 0;
             overflow: hidden;
         }
 
@@ -528,11 +558,11 @@
         .problem-intro {
             text-align: center;
             max-width: 800px;
-            margin: 0 auto 30px; /* Reduced bottom margin */
+            margin: 0 auto 30px;
         }
 
         .problem-grid {
-            margin-top: 30px; /* Reduced top margin */
+            margin-top: 30px;
         }
 
         .problem-card {
@@ -555,7 +585,7 @@
         }
 
         .problem-footer {
-            margin-top: 30px; /* Reduced top margin */
+            margin-top: 30px;
             text-align: center;
             background-color: rgba(110, 47, 21, 0.04);
             padding: 28px;
@@ -578,7 +608,7 @@
         }
 
         .stat-grid {
-            margin-top: 30px; /* Reduced top margin */
+            margin-top: 30px;
         }
 
         .stat-card {
@@ -622,7 +652,7 @@
         }
 
         .fitur-grid {
-            margin-top: 30px; /* Reduced top margin */
+            margin-top: 30px;
         }
 
         .fitur-card {
@@ -647,7 +677,7 @@
         }
 
         .benefit-grid {
-            margin-top: 30px; /* Reduced top margin */
+            margin-top: 30px;
         }
 
         .benefit-card {
@@ -667,14 +697,14 @@
             line-height: 1;
         }
 
-        /* YOUTUBE VIDEO SECTION STYLES (WITH PREMIUM COVER WORKFLOW) */
+        /* YOUTUBE VIDEO SECTION STYLES */
         .video-section {
             background-color: var(--white);
         }
 
         .video-wrapper {
             max-width: 850px;
-            margin: 24px auto 0; /* Reduced top margin */
+            margin: 24px auto 0;
             background: var(--white);
             border-radius: var(--radius-card);
             padding: 16px;
@@ -685,7 +715,7 @@
         .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             border-radius: 8px;
             overflow: hidden;
@@ -716,7 +746,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(110, 47, 21, 0.15); /* elegant warm overlay */
+            background: rgba(110, 47, 21, 0.15);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -734,7 +764,7 @@
             justify-content: center;
             box-shadow: 0 10px 25px rgba(110, 47, 21, 0.25);
             transition: var(--transition);
-            padding-left: 4px; /* Perfectly center the triangle play icon */
+            padding-left: 4px;
         }
 
         .video-container:hover .play-button-circle {
@@ -742,10 +772,6 @@
             background-color: var(--primary);
             color: var(--white);
             box-shadow: 0 12px 30px rgba(110, 47, 21, 0.4);
-        }
-
-        .video-container:hover .portfolio-main-img {
-            transform: scale(1.03);
         }
 
         .video-container iframe {
@@ -767,7 +793,7 @@
             background-color: var(--bg-card);
             border: 1px solid rgba(236, 213, 187, 0.4);
             border-radius: var(--radius-card);
-            padding: 36px; /* Compact padding */
+            padding: 36px;
         }
 
         /* FAQ SECTION */
@@ -780,8 +806,8 @@
             background-color: var(--white);
             border: 1px solid rgba(236, 213, 187, 0.4);
             border-radius: var(--radius-card);
-            padding: 24px; /* Reduced padding */
-            margin-top: 24px; /* Reduced top margin */
+            padding: 24px;
+            margin-top: 24px;
             box-shadow: 0 8px 25px rgba(110, 47, 21, 0.02);
         }
 
@@ -854,20 +880,20 @@
             margin: 0 auto 36px;
         }
 
-        /* FOOTER (COMPACT & RAMPING) */
+        /* FOOTER */
         footer {
             background-color: var(--primary);
             color: var(--white);
-            padding-top: 40px;    /* ULTRA COMPACTED */
-            padding-bottom: 24px; /* ULTRA COMPACTED */
+            padding-top: 40px;
+            padding-bottom: 24px;
             border-top: 5px solid var(--secondary-light);
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1.2fr 1.2fr;
-            gap: 32px;            /* COMPACTED */
-            margin-bottom: 32px;  /* COMPACTED */
+            gap: 32px;
+            margin-bottom: 32px;
         }
 
         .footer-logo {
@@ -938,10 +964,10 @@
             margin-bottom: 0;
         }
 
-        /* FAQ CONTAINER styles */
+        /* FAQ CONTAINER */
         .faq-container {
             max-width: 850px;
-            margin: 30px auto 0; /* Reduced top margin */
+            margin: 30px auto 0;
         }
 
         .faq-item {
@@ -1253,7 +1279,7 @@
             }
             .grid-2 {
                 grid-template-columns: 1fr;
-                gap: 32px; /* Compact gap */
+                gap: 32px;
             }
             .footer-grid {
                 grid-template-columns: 1fr;
@@ -1263,61 +1289,60 @@
 
         @media (max-width: 768px) {
             :root {
-                --section-padding: 24px; /* STRICT 24PX MOBILE SECTION PADDING FOR DEEPER COMPACTNESS */
+                --section-padding: 24px;
             }
 
             header {
-                padding: 12px 0 !important; /* COMPACT HEADER FOR MOBILE WITH HORIZONTAL MENU */
+                padding: 12px 0 !important;
             }
 
             .nav-container {
-                flex-direction: column; /* Stack logo and menu row on small screens */
+                flex-direction: column;
                 gap: 12px;
                 align-items: center;
             }
 
             .nav-links {
                 display: flex;
-                flex-direction: row; /* KEEP HORIZONTAL ROW ON MOBILE */
-                flex-wrap: wrap; /* Wrap menu nicely on very small screens */
+                flex-direction: row;
+                flex-wrap: wrap;
                 justify-content: center;
-                gap: 14px; /* Slightly tighter gap on mobile */
+                gap: 14px;
                 width: 100%;
             }
 
             footer {
-                padding-top: 32px !important;    /* COMPACTED FOR MOBILE */
-                padding-bottom: 20px !important; /* COMPACTED FOR MOBILE */
+                padding-top: 32px !important;
+                padding-bottom: 20px !important;
             }
 
             /* --- MANDATORY FONT SIZE RULES --- */
             h1 {
                 font-size: 32px !important;
                 line-height: 1.25em !important;
-                text-align: center !important; /* Alignment center for H1 single text */
+                text-align: center !important;
             }
             h2 {
                 font-size: 28px !important;
                 line-height: 1.3em !important;
-                text-align: center !important; /* Alignment center for H2 single text */
+                text-align: center !important;
             }
             h3 {
                 font-size: 24px !important;
                 line-height: 1.3em !important;
-                text-align: center !important; /* Alignment center for H3 single text */
+                text-align: center !important;
             }
             h4 {
                 font-size: 20px !important;
                 line-height: 1.3em !important;
-                text-align: center !important; /* Alignment center for H4 single text */
+                text-align: center !important;
             }
             p, body, li {
-                font-size: 17px !important; /* Within 16-18px range */
+                font-size: 17px !important;
                 line-height: 1.6em !important;
             }
 
             /* --- MANDATORY STANDALONE TEXT CENTER ALIGNMENT --- */
-            /* Standalone texts are center-aligned, card texts/lists are left-aligned for readability */
             .hero-desc,
             .problem-intro p,
             .stat-desc,
@@ -1339,7 +1364,7 @@
             .faq-content p,
             .footer-col p {
                 text-align: left !important;
-                font-size: 16px !important; /* Stays comfortably in 16-18px */
+                font-size: 16px !important;
             }
 
             .problem-card h3,
@@ -1355,12 +1380,12 @@
             .portfolio-main-img,
             .lightbox-img,
             iframe {
-                max-width: 100% !important; /* Ensure image never leaks the screen viewport */
+                max-width: 100% !important;
                 height: auto !important;
             }
 
             .hero-visual img {
-                height: 300px !important; /* constrained for neat mobile views */
+                height: 300px !important;
             }
 
             .portfolio-main-img-wrapper {
@@ -1407,7 +1432,7 @@
                 right: 24px;
             }
             .nav-links {
-                gap: 10px; /* Even tighter for extremely small widths */
+                gap: 10px;
             }
             .nav-links a {
                 font-size: 0.8rem !important;
@@ -1424,18 +1449,12 @@
                 <img src="https://i.spread.name/7409f2ec-0ca3-4018-8c43-273d7f3d7d64_Picture1.png" alt="Raja Interior Logo">
             </a>
             
-            <button class="menu-toggle" id="menu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-links" aria-label="Buka Menu Navigasi">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
             <ul class="nav-links" id="nav-links" role="menubar">
                 <li role="none"><a href="#about" role="menuitem">Tentang Kami</a></li>
                 <li role="none"><a href="#portfolio" role="menuitem">Portofolio</a></li>
                 <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
                 <li role="none">
-                    <a href="#" onclick="openConsultationModal(); return false;" class="btn btn-outline" style="padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;" role="menuitem">
+                    <a href="#" onclick="openConsultationModalWithPixel(); return false;" class="btn btn-outline" style="padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;" role="menuitem">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color: #25D366; flex-shrink: 0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.455h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         Konsultasi Gratis
                     </a>
@@ -1444,8 +1463,8 @@
         </div>
     </header>
 
-    <!-- FLOATING WHATSAPP BUTTON -->
-    <button class="floating-wa" onclick="openConsultationModal()" aria-label="Konsultasi Gratis via WhatsApp">
+    <!-- FLOATING WHATSAPP BUTTON (DILENGKAPI EVENT TRACKING) -->
+    <button class="floating-wa" onclick="openConsultationModalWithPixel();" aria-label="Konsultasi Gratis via WhatsApp">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.455h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
@@ -1463,7 +1482,7 @@
                 <h1 class="hero-title">Wujudkan Hunian Impian Tanpa <span>Cemas & Overbudget</span></h1>
                 <p class="hero-desc">Studio desain interior, workshop custom furniture, dan renovasi rumah di Bandung. Menghadirkan keseimbangan sempurna antara estetika premium, kenyamanan, dan transparansi anggaran sejak 2015.</p>
                 <div class="hero-actions">
-                    <button onclick="openConsultationModal()" class="btn btn-primary">Konsultasi Gratis Sekarang</button>
+                    <button onclick="openConsultationModalWithPixel()" class="btn btn-primary">Konsultasi Gratis Sekarang</button>
                     <a href="#about" class="btn btn-outline">Pelajari Alur Kerja</a>
                 </div>
             </div>
@@ -1604,7 +1623,7 @@
                 <div class="card benefit-card">
                     <div class="benefit-num">02</div>
                     <h3>Dikerjakan Tim Ahli Berpengalaman</h3>
-                    <p>Sejak 2015, kami telah menyelesaikan ratusan portofolio interior.Dan pengrajin berpengalaman yang sangat ahli di bidangnya.</p>
+                    <p>Sejak 2015, kami telah menyelesaikan ratusan portofolio interior. Dan pengrajin berpengalaman yang sangat ahli di bidangnya.</p>
                 </div>
                 <div class="card benefit-card">
                     <div class="benefit-num">03</div>
@@ -1619,7 +1638,7 @@
                 <div class="card benefit-card">
                     <div class="benefit-num">05</div>
                     <h3>RAB Transparan Sejak Awal</h3>
-                    <p>Seluruh item pekerjaan tertuang dalam rencana anggaran biaya.RAB sudah termasuk bahan,produksi dan jasa instalasi</p>
+                    <p>Seluruh item pekerjaan tertuang dalam rencana anggaran biaya. RAB sudah termasuk bahan, produksi dan jasa instalasi</p>
                 </div>
                 <div class="card benefit-card">
                     <div class="benefit-num">06</div>
@@ -1766,7 +1785,6 @@
             
             <div class="video-wrapper">
                 <div class="video-container" id="video-container" onclick="playYoutubeVideo()">
-                    <!-- COVER IMAGE KUSTOM (Bisa diganti URL src milik sendiri di bawah) -->
                     <div class="video-cover" id="video-cover">
                         <img class="cover-img" src="https://i.spread.name/5b989412-7019-4829-84a7-b4903ca298d1_Gemini_Generated_Image_ece25vece25vece2.png?auto=format&fit=crop&w=1200&q=80" alt="Cover Video Workshop Raja Interior">
                         <div class="play-button-overlay">
@@ -1775,7 +1793,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Player placeholder yang akan diganti iframe secara otomatis oleh JS -->
                     <div id="youtube-player"></div>
                 </div>
             </div>
@@ -1797,7 +1814,6 @@
                         <div style="margin-bottom: 24px; border-bottom: 1px solid rgba(236, 213, 187, 0.3); padding-bottom: 20px;">
                             <h4 style="color: var(--secondary-dark); margin-bottom: 8px;">📍 Lokasi Workshop & Studio</h4>
                             <p style="font-size: 0.95rem; margin-bottom: 14px;">Jl. Parakan Saat No. 2, Arcamanik, Bandung, Jawa Barat</p>
-                            <!-- Accurate Google Maps Embed -->
                             <div style="width: 100%; height: 200px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(110, 47, 21, 0.15);">
                                 <iframe 
                                     src="https://maps.google.com/maps?q=CV.%20Raja%20Ardana%2C%20Jl.%20Parakan%20Saat%20No.%202%2C%20Arcamanik%2C%20Bandung&t=&z=15&ie=UTF8&iwloc=&output=embed" 
@@ -1925,12 +1941,12 @@
         </div>
     </section>
 
-    <!-- 11. CLOSING SECTION -->
+    <!-- 11. CLOSING SECTION (DENGAN EVENT TRACKING) -->
     <section class="section closing-section">
         <div class="container">
             <h2>Rumah Anda Adalah Investasi Seumur Hidup</h2>
             <p>Jangan pertaruhkan kenyamanan jangka panjang Anda dan keluarga dengan memilih kontraktor abal-abal tanpa integritas. Wujudkan konsep rumah aesthetic minimalis fungsional bersama tim profesional kami.</p>
-            <button onclick="openConsultationModal()" class="btn btn-secondary">Konsultasi Gratis Sekarang</button>
+            <button onclick="openConsultationModalWithPixel()" class="btn btn-secondary">Konsultasi Gratis Sekarang</button>
         </div>
     </section>
 
@@ -2076,7 +2092,7 @@
             const chosenUrl = projectsData[projIndex].images[imgIndex];
             mainImg.src = chosenUrl;
             
-            // Bind pop-out lightbox to open starting at the selected thumbnail image index!
+            // Bind pop-out lightbox to open starting at the selected thumbnail image index
             mainImgWrapper.setAttribute('onclick', `openProjectLightbox(${projIndex}, ${imgIndex})`);
         }
 
@@ -2090,7 +2106,6 @@
 
         // Close Lightbox popup
         function closeLightbox() {
-            document.getElementById('portfolio-lightbox').classList.remove('remove');
             document.getElementById('portfolio-lightbox').classList.remove('open');
         }
 
@@ -2145,11 +2160,8 @@
         function playYoutubeVideo() {
             const cover = document.getElementById('video-cover');
             const playerDiv = document.getElementById('youtube-player');
-            
-            // TIPS: Ubah ID Video YouTube Anda di sini (contoh: y9S7Z2gK_F4)
             const videoId = "y9S7Z2gK_F4"; 
             
-            // Masukkan iframe dengan parameter autoplay agar video langsung menyala otomatis saat kover diklik
             playerDiv.innerHTML = `
                 <iframe 
                     src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0" 
@@ -2159,7 +2171,6 @@
                 </iframe>
             `;
             
-            // Samarkan kover dengan transisi CSS opasitas
             cover.style.opacity = '0';
             setTimeout(() => {
                 cover.style.display = 'none';
@@ -2171,32 +2182,40 @@
             const faqItem = buttonElement.parentElement;
             const isActive = faqItem.classList.contains('active');
             
-            // Close all active FAQs first for accordion style
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('active');
             });
 
-            // Open targeted one if it wasn't already active
             if (!isActive) {
                 faqItem.classList.add('active');
             }
         }
 
-        // Modal triggers
-        function openConsultationModal() {
+        // Membuka modal formulir & Mengirimkan event 'Contact' ke Meta Pixel
+        function openConsultationModalWithPixel() {
+            // Trigger Meta Pixel Contact Event
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Contact', {
+                    content_category: 'Consultation Button Click',
+                    content_name: 'Tombol Konsultasi Landing Page'
+                });
+                console.log("Meta Pixel: Event 'Contact' dikirim.");
+            }
+            
+            // Buka Modal Form
             document.getElementById('lead-modal').classList.add('open');
         }
-
-        // Add a helper function to bind the footer link correctly as well
-        document.querySelectorAll('footer .footer-links a[href="#problem"]').forEach(link => {
-            link.parentElement.remove(); // Removes the problem navigation from footer as well
-        });
 
         function closeConsultationModal() {
             document.getElementById('lead-modal').classList.remove('open');
         }
 
-        // Handle conversion form mock submit
+        // Menghapus data navigasi bermasalah jika ada di footer
+        document.querySelectorAll('footer .footer-links a[href="#problem"]').forEach(link => {
+            link.parentElement.remove();
+        });
+
+        // Menangani pengiriman form dengan integrasi Event Meta Pixel 'Lead'
         function handleFormSubmit(event) {
             event.preventDefault();
             const name = document.getElementById('lead-name').value;
@@ -2215,6 +2234,17 @@
                               `Mohon segera hubungi saya kembali untuk konsultasi lebih lanjut. Terima kasih!`;
 
             const waUrl = `https://api.whatsapp.com/send?phone=${adminPhoneNumber}&text=${waMessage}`;
+
+            // Trigger Meta Pixel Lead Event (Sangat Penting Untuk Iklan Konversi)
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Form Konsultasi Gratis',
+                    content_category: 'Lead Capture Form',
+                    value: 0.00, // Anda dapat menyetel perkiraan nilai per prospek jika diinginkan
+                    currency: 'IDR'
+                });
+                console.log("Meta Pixel: Event 'Lead' berhasil dikirim!");
+            }
 
             // Success feedback inside Modal
             const modalContent = document.querySelector('.modal-content');
@@ -2237,10 +2267,10 @@
                 </div>
             `;
 
-            // Auto-redirect after delay
+            // Auto-redirect setelah jeda agar Pixel tuntas terkirim
             setTimeout(() => {
                 window.open(waUrl, '_blank');
-            }, 1500);
+            }, 1200);
         }
     </script>
 </body>
